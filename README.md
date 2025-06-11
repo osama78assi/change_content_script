@@ -146,14 +146,13 @@ rec_read_all_files_paths(ignore=['node_modules', 'keepItSafe.js', 'dontTouchIt.t
 rec_read_all_files_paths(wanted_exts='py', skip_hidden=False)
 ```
 
-4. When you want just to get paths from a directory
+4. When you want just to get files paths from a directory
 
 ```py
-# For passing array of extentions
 paths = read_files_paths_from_dir(wanted_exts=['js', 'txt'])
 ```
 
-5. In case you want to see all the paths in all directories
+5. In case you want to see all the paths in all nested directories
 
 ```py
 # For reading files in all directories
