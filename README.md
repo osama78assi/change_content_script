@@ -140,10 +140,10 @@ rec_read_all_files_paths(wanted_exts=['js', 'ts'])
 rec_read_all_files_paths(ignore=['node_modules', 'keepItSafe.js', 'dontTouchIt.ts'], wanted_exts=['js', 'ts'])
 ```
 
-3. If (for some reason) you want to touch hidden files. this script by default doesn't touch them like ignoring .git folder. but you can enable it
+3. If (for some reason) you want to touch hidden files. this script by default doesn't touch them like ignoring **.git** folder (because it has a lot of files that I don't need to do anything with them). but you can enable it
 
 ```py
-rec_read_all_files_paths(wanted_exts='py', skip_hidden=True)
+rec_read_all_files_paths(wanted_exts='py', skip_hidden=False)
 ```
 
 4. When you want just to get paths from a directory
