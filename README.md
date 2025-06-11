@@ -63,9 +63,9 @@ const { Request, Response } = pkg;
 
 ```
 
-and simpply I don't want to load entire **express** module just for types !
+and simpply I don't want to load entire **express** module just for types!
 
-so I will go with simpel solution **CHANGE IT.** But that will take time. A lot of time and I have a lot of files. that annoying simply.
+so I will go with simpel solution **CHANGE IT.** But that will take time. A lot of time and I have a lot of files. that's annoying simply.
 
 So I said what if I have something that read these files and change what I want ?
 
