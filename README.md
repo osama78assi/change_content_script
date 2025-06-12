@@ -2,7 +2,7 @@
 What I hate and everyone hate is refactoring it's annoying and costs a lot of time. While there are many tools and ways in text editors to help you change something like quick fixs or even match by Regex. There is small things that theses **Can't** do. And maybe you have a lot of files with the same things to change
 
 # Simple Script
-This may not be the perfect script. and it **shouldn't** be. but it was **very helpful** with be so maybe someone can use it.
+This may not be the perfect script. and it **shouldn't** be. but it was **very helpful** with me so maybe someone can use it.
 
 This simple script can read all files in passed directory (recursivly if you want) and replace what ever you want by whatever you want also
 
@@ -65,7 +65,7 @@ const { Request, Response } = pkg;
 
 and simpply I don't want to load entire **express** module just for types!
 
-so I will go with simpel solution **CHANGE IT.** But that will take time. A lot of time and I have a lot of files. that's annoying simply.
+so I will go with simple solution **CHANGE IT.** But that will take time. A lot of time and I have a lot of files. that's annoying simply.
 
 So I said what if I have something that read these files and change what I want ?
 
