@@ -59,7 +59,7 @@ def read_files_paths_from_dir(dir_path=getcwd(), wanted_exts: str | List[str]='*
         if \
         isfile(join(dir_path, file_name)) \
         and (not file_name.startswith('.') if skip_hidden else True) \
-        and is_accepted_extnsion(wanted_exts, file_name.split('.')[1]) \
+        and is_accepted_extnsion(wanted_exts, file_name.split('.')[-1]) \
         and file_name not in ignore:
             only_files.append(join(dir_path, file_name))
     
@@ -103,7 +103,7 @@ def rec_read_all_files_paths(dir_path=getcwd(), ignore=[], wanted_exts='*', skip
         if \
         isfile(join(dir_path, child_dir_name)) \
         and (not child_dir_name.startswith('.') if skip_hidden else True) \
-        and is_accepted_extnsion(wanted_exts, child_dir_name.split('.')[1]) \
+        and is_accepted_extnsion(wanted_exts, child_dir_name.split('.')[-1]) \
         and child_dir_name not in ignore:
             all_files.append(join(dir_path, child_dir_name))
     
