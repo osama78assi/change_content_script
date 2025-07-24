@@ -59,7 +59,7 @@ def read_files_paths_from_dir(dir_path=getcwd(), wanted_exts: str | List[str]='*
         if \
         isfile(join(dir_path, file_name)) \
         and (not file_name.startswith('.') if skip_hidden else True) \
-        and is_accepted_extnsion(wanted_exts, file_name.split('.')[-1]) \
+        and is_accepted_extnsion(wanted_exts, file_name.split('.')[1]) \
         and file_name not in ignore:
             only_files.append(join(dir_path, file_name))
     
@@ -103,7 +103,7 @@ def rec_read_all_files_paths(dir_path=getcwd(), ignore=[], wanted_exts='*', skip
         if \
         isfile(join(dir_path, child_dir_name)) \
         and (not child_dir_name.startswith('.') if skip_hidden else True) \
-        and is_accepted_extnsion(wanted_exts, child_dir_name.split('.')[-1]) \
+        and is_accepted_extnsion(wanted_exts, child_dir_name.split('.')[1]) \
         and child_dir_name not in ignore:
             all_files.append(join(dir_path, child_dir_name))
     
@@ -150,6 +150,27 @@ def change_text_from_files(files_paths: List[str], pattern: str | Pattern[str], 
         change_text_from_file(file_path, pattern, repl)
 
 
+def check_references(files_paths: List[str], look_for: str) -> List[str]:
+    """_summary_
+        Take files paths and check for reference for class, method or even variable distributed over many files
+    Args:
+        files_paths (List[str]): The path for the files you want to search for
+        look_for (str): Method, variable or class to check for its references
+
+    Returns:
+        List[str]: reference with file name and line
+    """
+    res = []
+
+    for file_path in files_paths:
+        with open(file_path, 'r') as file:
+            for line_index, line in enumerate(file.readlines()):
+                if look_for in line:
+                    res.append(look_for + " in file " + file_path + " in line " + str(line_index+1))
+    
+    return res
+
+
 if __name__ == "__main__":
     # Take simple input from terminal But calling the methods as you want and pass replace function is much better and helpful
     # exts = []
@@ -183,4 +204,12 @@ if __name__ == "__main__":
     # change_text_from_files(paths, pattern, replac_with)
     
     # print("Check now.")
+
+    # files = rec_read_all_files_paths(ignore=['node_modules'], wanted_exts='js')
+
+    # res = check_references(files, "authRouter")
+
+    # for r in res:
+    #     print(r)
+    
     pass
