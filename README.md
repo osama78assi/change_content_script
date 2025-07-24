@@ -180,7 +180,7 @@ files = rec_read_all_files_paths(ignore=['node_modules'], wanted_exts='js')
 res = check_references(files, "authRouter")
 
 for r in res:
-    print(r) # authRouter in file F:\test\app.js in line 9
+    print(r) # authRouter in file F:\test\app.js:9 in line 9
 ```
 
 btw If you want to make updates or improvements to the code in this repo, feel free to make your changes and open a pull request.
