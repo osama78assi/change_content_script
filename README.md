@@ -171,7 +171,7 @@ change_text_from_file(
 )
 ```
 
-7. When **find references** get crashed in my VS code I get depressed and especially when my project is large a bit. So this function just find the reference for a variable, method or class you want in the provided file paths
+7. When **find references** get crashed in my VS code I get depressed and especially when my project is large a bit. So this function just find the references for a variable, method or class you want in the provided file paths
 ```py
 # Get all files in my current working directory
 files = rec_read_all_files_paths(ignore=['node_modules'], wanted_exts='js')
