@@ -166,7 +166,7 @@ def check_references(files_paths: List[str], look_for: str) -> List[str]:
         with open(file_path, 'r') as file:
             for line_index, line in enumerate(file.readlines()):
                 if look_for in line:
-                    res.append(look_for + " in file " + file_path + " in line " + str(line_index+1))
+                    res.append(look_for + " in file " + file_path + ":" + str(line_index+1) + " in line " + str(line_index+1))
     
     return res
 
